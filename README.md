@@ -1,4 +1,4 @@
-# Jeto: powerful Java OCR Rest API
+# Jeto: Java OCR Rest API
 
 ## What is it?
 
