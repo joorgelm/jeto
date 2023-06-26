@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  jeto-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: jeto-api
+    env_file:
+      - .env.docker
+    command: java -jar app.jar
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
