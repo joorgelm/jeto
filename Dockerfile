@@ -13,4 +13,4 @@ COPY ./ ./
 RUN mvn clean package -DskipTests
 
 # run
-ENTRYPOINT ["java","-jar","target/jeto-1.0.0-BETA.jar"]
+ENTRYPOINT ["java","-jar","target/jeto-1.0.0-BETA.jar", "-Xmx512m"]
