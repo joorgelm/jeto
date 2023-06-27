@@ -17,7 +17,9 @@ EXPOSE ${PORT}
 
 # package application
 COPY ./ ./
-RUN mvn clean package -DskipTests
+# RUN mvn clean package -DskipTests
+RUN mvn -Pnative native:compile -DskipTests
 
 # run
-ENTRYPOINT ["java","-jar","target/jeto-1.0.0-BETA.jar", "-Xmx384m"]
+#ENTRYPOINT ["java","-jar","target/jeto-1.0.0-BETA.jar", "-Xmx384m"]
+ENTRYPOINT ["target/jeto-1.0.0-BETA", "-Xmx384m"]
