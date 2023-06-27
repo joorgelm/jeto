@@ -6,11 +6,7 @@ RUN apk add --no-cache tesseract-ocr
 RUN mkdir -p /usr/share/tessdata
 ADD https://github.com/tesseract-ocr/tessdata/raw/main/por.traineddata /usr/share/tessdata/por.traineddata
 
-ENV TESSDATA_PREFIX=/usr/share/tessdata
-ENV SERVER_PORT=3000
-ENV DOCKER_BUILDKIT=1
-
-EXPOSE 3000
+EXPOSE ${PORT}
 
 # package application
 COPY ./ ./
