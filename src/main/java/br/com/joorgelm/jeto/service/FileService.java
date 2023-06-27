@@ -41,9 +41,9 @@ public class FileService implements IFileSerice {
     }
 
     private void validateSize(MultipartFile file) {
-        DataSize megabyte = DataSize.ofMegabytes(1);
-        if (DataSize.ofBytes(file.getSize()).compareTo(megabyte) > 0) {
-            throw new MaxUploadSizeExceededException(megabyte.toBytes());
+        DataSize kilobytes = DataSize.ofKilobytes(100);
+        if (DataSize.ofBytes(file.getSize()).compareTo(kilobytes) > 0) {
+            throw new MaxUploadSizeExceededException(kilobytes.toBytes());
         }
     }
 }
