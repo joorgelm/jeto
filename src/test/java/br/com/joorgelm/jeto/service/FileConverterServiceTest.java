@@ -1,5 +1,6 @@
 package br.com.joorgelm.jeto.service;
 
+import br.com.joorgelm.jeto.domain.service.FileConverterService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

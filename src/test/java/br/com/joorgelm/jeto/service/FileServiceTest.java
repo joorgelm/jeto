@@ -1,5 +1,7 @@
 package br.com.joorgelm.jeto.service;
 
+import br.com.joorgelm.jeto.domain.service.FileConverterService;
+import br.com.joorgelm.jeto.domain.service.FileService;
 import org.assertj.core.util.Lists;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Assertions;
@@ -36,6 +38,7 @@ class FileServiceTest {
     @Test
     void should_addFileToQueue() {
         MultipartFile mockMultipartFile = mock(MultipartFile.class);
+        when(mockMultipartFile.getOriginalFilename()).thenReturn("teste.pdf");
 
         when(mockMultipartFile.getSize()).thenReturn(100L);
 
@@ -49,6 +52,7 @@ class FileServiceTest {
         MultipartFile mockMultipartFile = mock(MultipartFile.class);
 
         when(mockMultipartFile.getSize()).thenReturn(100L);
+        when(mockMultipartFile.getOriginalFilename()).thenReturn("teste.pdf");
 
         fileService.addFileToQueue(mockMultipartFile);
         File mockFile = Instancio.of(File.class).create();
@@ -63,7 +67,7 @@ class FileServiceTest {
     @Test
     void should_returnListOfQueueFiles() {
         MultipartFile mockMultipartFile = mock(MultipartFile.class);
-
+        when(mockMultipartFile.getOriginalFilename()).thenReturn("teste.pdf");
         when(mockMultipartFile.getSize()).thenReturn(100L);
 
         fileService.addFileToQueue(mockMultipartFile);

@@ -1,5 +1,7 @@
 package br.com.joorgelm.jeto.service;
 
+import br.com.joorgelm.jeto.domain.service.IFileSerice;
+import br.com.joorgelm.jeto.domain.service.TesseractService;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.instancio.Instancio;

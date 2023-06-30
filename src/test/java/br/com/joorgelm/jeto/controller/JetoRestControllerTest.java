@@ -19,6 +19,7 @@ import java.io.IOException;
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource(locations = "classpath:application-test.properties")
+
 class JetoRestControllerTest {
 
     @Autowired

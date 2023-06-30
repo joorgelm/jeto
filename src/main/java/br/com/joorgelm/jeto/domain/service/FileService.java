@@ -1,6 +1,7 @@
-package br.com.joorgelm.jeto.service;
+package br.com.joorgelm.jeto.domain.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.jmx.export.metadata.InvalidMetadataException;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.util.unit.DataSize;
@@ -24,8 +25,18 @@ public class FileService implements IFileSerice {
     private final Queue<MultipartFile> fileQueue = new ConcurrentLinkedQueue<>();
 
     public void addFileToQueue(@NonNull MultipartFile file) {
+        validateFormat(file.getOriginalFilename());
         validateSize(file);
         fileQueue.add(file);
+    }
+
+    private void validateFormat(String fileName) {
+        String[] validFormats = {"tiff", "jpeg", "png", "bmp", "pdf"};
+        for (String format: validFormats) {
+            if (fileName.toLowerCase().contains(format))
+                return;
+        }
+        throw new InvalidMetadataException("");
     }
 
     public File popFileFromQueue() throws IOException {

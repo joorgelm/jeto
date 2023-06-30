@@ -1,6 +1,6 @@
-package br.com.joorgelm.jeto.controller;
+package br.com.joorgelm.jeto.adapter.controller;
 
-import br.com.joorgelm.jeto.usecase.ExtractTextUsecase;
+import br.com.joorgelm.jeto.application.usecase.ExtractTextUsecase;
 import lombok.AllArgsConstructor;
 import net.sourceforge.tess4j.TesseractException;
 import org.springframework.http.HttpStatus;

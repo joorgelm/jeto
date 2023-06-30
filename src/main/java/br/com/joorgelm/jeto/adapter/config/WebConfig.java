@@ -1,4 +1,4 @@
-package br.com.joorgelm.jeto.config;
+package br.com.joorgelm.jeto.adapter.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package br.com.joorgelm.jeto.config;
+package br.com.joorgelm.jeto.adapter.config;
 
 import net.sourceforge.tess4j.Tesseract;
 import org.springframework.context.annotation.Bean;

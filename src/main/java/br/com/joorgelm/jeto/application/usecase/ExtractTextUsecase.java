@@ -1,7 +1,7 @@
-package br.com.joorgelm.jeto.usecase;
+package br.com.joorgelm.jeto.application.usecase;
 
-import br.com.joorgelm.jeto.service.IFileSerice;
-import br.com.joorgelm.jeto.service.ITesseractServce;
+import br.com.joorgelm.jeto.domain.service.IFileSerice;
+import br.com.joorgelm.jeto.domain.service.ITesseractServce;
 import lombok.AllArgsConstructor;
 import net.sourceforge.tess4j.TesseractException;
 import org.springframework.stereotype.Service;

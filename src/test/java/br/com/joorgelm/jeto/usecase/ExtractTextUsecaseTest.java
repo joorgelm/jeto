@@ -1,7 +1,8 @@
 package br.com.joorgelm.jeto.usecase;
 
-import br.com.joorgelm.jeto.service.IFileSerice;
-import br.com.joorgelm.jeto.service.ITesseractServce;
+import br.com.joorgelm.jeto.application.usecase.ExtractTextUsecase;
+import br.com.joorgelm.jeto.domain.service.IFileSerice;
+import br.com.joorgelm.jeto.domain.service.ITesseractServce;
 import net.sourceforge.tess4j.TesseractException;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.BeforeEach;

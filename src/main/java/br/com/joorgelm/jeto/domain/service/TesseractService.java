@@ -1,4 +1,4 @@
-package br.com.joorgelm.jeto.service;
+package br.com.joorgelm.jeto.domain.service;
 
 import lombok.AllArgsConstructor;
 import net.sourceforge.tess4j.ITesseract;

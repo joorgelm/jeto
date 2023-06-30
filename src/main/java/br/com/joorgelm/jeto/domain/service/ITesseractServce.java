@@ -1,4 +1,4 @@
-package br.com.joorgelm.jeto.service;
+package br.com.joorgelm.jeto.domain.service;
 
 import net.sourceforge.tess4j.TesseractException;
 
