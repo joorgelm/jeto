@@ -31,7 +31,7 @@ public class FileService implements IFileSerice {
     }
 
     private void validateFormat(String fileName) {
-        String[] validFormats = {"tiff", "jpeg", "png", "bmp", "pdf"};
+        String[] validFormats = {"tiff", "jpeg", "jpg",  "png", "bmp", "pdf"};
         for (String format: validFormats) {
             if (fileName.toLowerCase().contains(format))
                 return;
@@ -52,7 +52,7 @@ public class FileService implements IFileSerice {
     }
 
     private void validateSize(MultipartFile file) {
-        DataSize kilobytes = DataSize.ofKilobytes(100);
+        DataSize kilobytes = DataSize.ofKilobytes(2048);
         if (DataSize.ofBytes(file.getSize()).compareTo(kilobytes) > 0) {
             throw new MaxUploadSizeExceededException(kilobytes.toBytes());
         }

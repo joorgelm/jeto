@@ -10,8 +10,8 @@ public class TesseractConfig {
     @Bean
     public Tesseract buildInstance() {
         var tesseract = new Tesseract();
+        tesseract.setPageSegMode(1);
         tesseract.setLanguage("por");
-        tesseract.setVariable("user_defined_dpi", "96");
 
         return tesseract;
     }

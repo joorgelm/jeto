@@ -27,7 +27,6 @@ class FileServiceTest {
 
     @Mock
     private FileConverterService fileConverterService;
-
     private FileService fileService;
 
     @BeforeEach

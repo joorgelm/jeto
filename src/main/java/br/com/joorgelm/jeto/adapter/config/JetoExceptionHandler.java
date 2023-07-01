@@ -31,7 +31,7 @@ public class JetoExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.PAYLOAD_TOO_LARGE)
-                .body("por enquanto estamos aceitando apenas arquivos de no máximo 100kb");
+                .body("por enquanto estamos aceitando apenas arquivos de no máximo 2Mb");
     }
 
     @ExceptionHandler(InvalidMetadataException.class)
@@ -41,6 +41,6 @@ public class JetoExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.PAYLOAD_TOO_LARGE)
-                .body("formatos aceitos: tiff, jpeg, png, bmp, pdf");
+                .body("formatos aceitos: tiff, jpeg, jpg, png, bmp, pdf");
     }
 }
