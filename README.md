@@ -1,3 +1,7 @@
+<p align="center">
+<img src="./assets/logo-transp.png" alt="Alt Text" width="65%">
+</p>
+
 # Jeto: Java OCR Rest API
 
 ## What is it?
